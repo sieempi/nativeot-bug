@@ -1,0 +1,103 @@
+
+
+            // Leap year calculation looks different from IsLeapYear since y1, y4,
+            // and y100 are relative to year 1, not year 0
+            bool leapYear = y1 == 3 && (y4 != 24 || y100 == 3);
+00007FF75695F729 83 7D E4 03          cmp         dword ptr [y1],3  
+00007FF75695F72D 75 24                jne         HelloWorldNative_HelloWorld_DateTimeUtils__GetDateValues+163h (07FF75695F753h)  
+00007FF75695F72F 83 7D E8 18          cmp         dword ptr [y4],18h  
+00007FF75695F733 75 0F                jne         HelloWorldNative_HelloWorld_DateTimeUtils__GetDateValues+154h (07FF75695F744h)  
+00007FF75695F735 83 7D EC 03          cmp         dword ptr [y100],3  
+00007FF75695F739 0F 94 C0             sete        al  
+00007FF75695F73C 0F B6 C0             movzx       eax,al  
+00007FF75695F73F 89 45 AC             mov         dword ptr [rbp-54h],eax  
+00007FF75695F742 EB 07                jmp         HelloWorldNative_HelloWorld_DateTimeUtils__GetDateValues+15Bh (07FF75695F74Bh)  
+00007FF75695F744 C7 45 AC 01 00 00 00 mov         dword ptr [rbp-54h],1  
+00007FF75695F74B 8B 45 AC             mov         eax,dword ptr [rbp-54h]  
+00007FF75695F74E 89 45 BC             mov         dword ptr [rbp-44h],eax  
+00007FF75695F751 EB 05                jmp         HelloWorldNative_HelloWorld_DateTimeUtils__GetDateValues+168h (07FF75695F758h)  
+00007FF75695F753 33 C0                xor         eax,eax  
+00007FF75695F755 89 45 BC             mov         dword ptr [rbp-44h],eax  
+00007FF75695F758 8B 45 BC             mov         eax,dword ptr [rbp-44h]  
+00007FF75695F75B 0F B6 C0             movzx       eax,al  
+00007FF75695F75E 89 45 E0             mov         dword ptr [leapYear],eax  
+            int[] days = leapYear ? DaysToMonth366 : DaysToMonth365;
+
+
+
+            // Leap year calculation looks different from IsLeapYear since y1, y4,
+            // and y100 are relative to year 1, not year 0
+            bool leapYear = y1 == 3 && (y4 != 24 || y100 == 3);
+00007FF7569ABBC3 83 7D EC 03          cmp         dword ptr [y1],3  
+00007FF7569ABBC7 75 1E                jne         Newtonsoft_Json_Newtonsoft_Json_Utilities_DateTimeUtils__GetDateValues+127h (07FF7569ABBE7h)  
+00007FF7569ABBC9 83 7D F0 18          cmp         dword ptr [y4],18h  
+00007FF7569ABBCD 75 0F                jne         Newtonsoft_Json_Newtonsoft_Json_Utilities_DateTimeUtils__GetDateValues+11Eh (07FF7569ABBDEh)  
+00007FF7569ABBCF 83 7D F4 03          cmp         dword ptr [y100],3  
+00007FF7569ABBD3 0F 94 C0             sete        al  
+00007FF7569ABBD6 0F B6 C0             movzx       eax,al  
+00007FF7569ABBD9 89 45 CC             mov         dword ptr [rbp-34h],eax  
+00007FF7569ABBDC EB 0E                jmp         Newtonsoft_Json_Newtonsoft_Json_Utilities_DateTimeUtils__GetDateValues+12Ch (07FF7569ABBECh)  
+00007FF7569ABBDE C7 45 CC 01 00 00 00 mov         dword ptr [rbp-34h],1  
+00007FF7569ABBE5 EB 05                jmp         Newtonsoft_Json_Newtonsoft_Json_Utilities_DateTimeUtils__GetDateValues+12Ch (07FF7569ABBECh)  
+00007FF7569ABBE7 33 C0                xor         eax,eax  
+00007FF7569ABBE9 89 45 CC             mov         dword ptr [rbp-34h],eax  
+00007FF7569ABBEC 83 7D CC 00          cmp         dword ptr [rbp-34h],0  
+
+00007FF7569ABBF0 75 0F                jne         Newtonsoft_Json_Newtonsoft_Json_Utilities_DateTimeUtils__GetDateValues+141h (07FF7569ABC01h)  
+00007FF7569ABBF2 E8 C4 21 43 FF       call        __GetGCStaticBase_Newtonsoft_Json_Newtonsoft_Json_Utilities_DateTimeUtils (07FF755DDDDBBh)  
+00007FF7569ABBF7 48 8B 40 08          mov         rax,qword ptr [rax+8]  
+00007FF7569ABBFB 48 89 45 C0          mov         qword ptr [rbp-40h],rax  
+00007FF7569ABBFF EB 03                jmp         Newtonsoft_Json_Newtonsoft_Json_Utilities_DateTimeUtils__GetDateValues+144h (07FF7569ABC04h)  
+!!!!!!!!!!!!!!!!!!!!
+============> endless loop:
+00007FF7569ABC01 90                   nop  			
+00007FF7569ABC02 EB FD                jmp         Newtonsoft_Json_Newtonsoft_Json_Utilities_DateTimeUtils__GetDateValues+141h (07FF7569ABC01h)  
+00007FF7569ABC04 48 8B 45 C0          mov         rax,qword ptr [rbp-40h]  
+00007FF7569ABC08 48 89 45 E0          mov         qword ptr [days],rax  
+            int[] days = leapYear ? DaysToMonth366 : DaysToMonth365;
+			
+			
+						
+			
+			
+			// Leap year calculation looks different from IsLeapYear since y1, y4,
+            // and y100 are relative to year 1, not year 0
+            bool leapYear = y1 == 3 && (y4 != 24 || y100 == 3);
+00007FF7219212B3 83 7D EC 03          cmp         dword ptr [y1],3  
+00007FF7219212B7 75 1E                jne         Newtonsoft_Json_Newtonsoft_Json_Utilities_DateTimeUtils__GetDateValues+127h (07FF7219212D7h)  
+00007FF7219212B9 83 7D F0 18          cmp         dword ptr [y4],18h  
+00007FF7219212BD 75 0F                jne         Newtonsoft_Json_Newtonsoft_Json_Utilities_DateTimeUtils__GetDateValues+11Eh (07FF7219212CEh)  
+00007FF7219212BF 83 7D F4 03          cmp         dword ptr [y100],3  
+00007FF7219212C3 0F 94 C0             sete        al  
+00007FF7219212C6 0F B6 C0             movzx       eax,al  
+00007FF7219212C9 89 45 CC             mov         dword ptr [rbp-34h],eax  
+00007FF7219212CC EB 0E                jmp         Newtonsoft_Json_Newtonsoft_Json_Utilities_DateTimeUtils__GetDateValues+12Ch (07FF7219212DCh)  
+00007FF7219212CE C7 45 CC 01 00 00 00 mov         dword ptr [rbp-34h],1  
+00007FF7219212D5 EB 05                jmp         Newtonsoft_Json_Newtonsoft_Json_Utilities_DateTimeUtils__GetDateValues+12Ch (07FF7219212DCh)  
+00007FF7219212D7 33 C0                xor         eax,eax  
+00007FF7219212D9 89 45 CC             mov         dword ptr [rbp-34h],eax  
+00007FF7219212DC 83 7D CC 00          cmp         dword ptr [rbp-34h],0  
+
+00007FF7219212E0 75 0F                jne         Newtonsoft_Json_Newtonsoft_Json_Utilities_DateTimeUtils__GetDateValues+141h (07FF7219212F1h)  
+00007FF7219212E2 E8 CD CB 45 FF       call        __GetGCStaticBase_Newtonsoft_Json_Newtonsoft_Json_Utilities_DateTimeUtils (07FF720D7DEB4h)  
+00007FF7219212E7 48 8B 40 08          mov         rax,qword ptr [rax+8]  
+00007FF7219212EB 48 89 45 C0          mov         qword ptr [rbp-40h],rax  
+00007FF7219212EF EB 0D                jmp         Newtonsoft_Json_Newtonsoft_Json_Utilities_DateTimeUtils__GetDateValues+14Eh (07FF7219212FEh)  
+00007FF7219212F1 E8 BE CB 45 FF       call        __GetGCStaticBase_Newtonsoft_Json_Newtonsoft_Json_Utilities_DateTimeUtils (07FF720D7DEB4h)  
+00007FF7219212F6 48 8B 40 10          mov         rax,qword ptr [rax+10h]  
+00007FF7219212FA 48 89 45 C0          mov         qword ptr [rbp-40h],rax  
+00007FF7219212FE 48 8B 45 C0          mov         rax,qword ptr [rbp-40h]  
+00007FF721921302 48 89 45 E0          mov         qword ptr [days],rax  
+            int[] days = leapYear ? DaysToMonth366 : DaysToMonth365;
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
