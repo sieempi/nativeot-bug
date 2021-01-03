@@ -24,7 +24,7 @@ namespace HelloWorld
             Console.WriteLine($"\t{year}\t{month}\t{day}");
 
             Console.Write("lib2:");
-            lib2.DateTimeUtils.GetDateValues(datetime, out year, out month, out day);
+            lib2.DateTimeUtils.GetDateValues(datetime, out year, out month, out day);   // compiles with an endless loop, never returns
             Console.WriteLine($"\t{year}\t{month}\t{day}");
 
             Console.WriteLine("bye");
